@@ -23,11 +23,11 @@ fi
     echo "##deb http://deb.debian.org/debian trixie main"
     echo "##deb http://deb.debian.org/debian trixie-updates main"
     echo "##deb http://deb.debian.org/debian-security/ trixie-security main"
-    echo "deb http://mirrors.bfsu.edu.cn/debian/ trixie main contrib non-free"
-    echo "deb http://mirrors.bfsu.edu.cn/debian/ trixie-updates main contrib non-free"
-    echo "deb http://mirrors.bfsu.edu.cn/debian/ trixie-backports main contrib non-free"
-    echo "deb http://mirrors.bfsu.edu.cn/debian-security/ trixie-security main contrib non-free"
-    echo "# deb http://mirrors.bfsu.edu.cn/debian/ sid main contrib non-free"
+    echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ trixie main contrib non-free"
+    echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-updates main contrib non-free"
+    echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-backports main contrib non-free"
+    echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian-security/ trixie-security main contrib non-free"
+    echo "# deb http://mirrors.tuna.tsinghua.edu.cn/debian/ sid main contrib non-free"
 } > /etc/apt/sources.list
 
 echo "修改成功."
