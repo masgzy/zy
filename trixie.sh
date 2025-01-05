@@ -58,6 +58,8 @@ if [ "$answer1" = "y" ]; then
     echo "将在三秒后执行重启命令..."
     sleep 3
     sudo reboot
+    stopvnc
+    exit
 else
     echo "用户选择不重启，正在退出..."
     exit 0
