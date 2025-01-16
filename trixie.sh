@@ -33,14 +33,14 @@ fi
 echo "修改成功."
 echo ""
 echo "正在更新源..."
-sudo apt update
+sudo apt update -y
 echo "更新成功."
 echo ""
 echo "正在更新软件包..."
-sudo apt upgrade
-sudo apt full-upgrade
-sudo apt autoremove
-sudo apt autoclean
+sudo apt upgrade -y
+sudo apt full-upgrade -y
+sudo apt autoremove -y
+sudo apt autoclean -y
 echo "更新成功."
 echo ""
 echo "正在显示当前系统版本"
