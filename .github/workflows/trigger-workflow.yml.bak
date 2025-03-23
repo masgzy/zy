@@ -1,25 +1,26 @@
 name: Trigger Workflow
 on:
   workflow_dispatch:
-    inputs:
-      job-index:
-        description: '作业编号'
-        required: true
-        type: integer
 
 jobs:
-  trigger:
+  trigger_jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 触发子工作流
         run: |
           #!/bin/bash
-          job_index=${{ github.event.inputs.job-index }}
-          echo "正在触发作业 $job_index"
-          # 使用GitHub API触发子工作流
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Content-Type: application/json" \
-            -d '{"ref_type":"branch","ref_name":"main","inputs":{"job-index":"$job_index"}}' \
-            https://api.github.com/repos/${{ github.repository }}/actions/workflows/job-workflow.yml/dispatches
+          # 总共需要触发的作业数量
+          total_jobs=140
+          # 循环触发每个作业
+          for ((i=1; i<=total_jobs; i++)); do
+            echo "正在触发作业 $i"
+            # 使用GitHub API触发子工作流
+            curl -X POST \
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Content-Type: application/json" \
+              -d '{{"ref_type":"branch","ref_name":"main","inputs":{"job-index":"'$i'"}}}' \
+              https://api.github.com/repos/${{ github.repository }}/actions/workflows/job-workflow.yml/dispatches
+            # 等待6小时再触发下一个作业
+            sleep 21600
+          done
