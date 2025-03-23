@@ -1,25 +1,11 @@
-name: Debugging with SSH
+name: debugger-action
 on:
-  workflow_dispatch
+  push:
+    workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Try Build
-        run: ./not-exist-file.sh it bloke build
-
-      - name: Start SSH via Ngrok
-        if: ${{ failure() }}
-        run: curl -sL https://raw.996855.xyz/debug-github-actions.sh | bash
-        env:
-          # After sign up on the https://ngrok.com/
-          # You can find this token here: https://dashboard.ngrok.com/get-started/setup
-          NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
-          # This password you will use when authorizing via SSH
-          USER_PASS: ${{ secrets.USER_PASS }}
-
-      - name: Don't kill instace
-        if: ${{ failure() }}
-        run: sleep 1h # Prevent to killing
+      - uses: actions/checkout@v2
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
