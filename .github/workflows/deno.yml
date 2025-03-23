@@ -20,7 +20,12 @@ jobs:
           #sudo apt upgrade
           sudo apt install openssh-server
           # 更新 /etc/ssh/sshd_config 文件
-          sudo sh -c 'echo -e "Port 22\nPasswordAuthentication yes\nPermitRootLogin yes" >> /etc/ssh/sshd_config'
+          sudo tee -a /etc/ssh/sshd_config > /dev/null <<EOF
+          Port 22
+          PasswordAuthentication yes
+          PermitRootLogin yes
+          EOF
+
 
           # 重启 SSH 服务以应用更改
           sudo systemctl restart ssh
