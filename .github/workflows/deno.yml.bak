@@ -17,7 +17,7 @@ jobs:
         run: |
           #!/bin/bash
           sudo apt update
-          sudo apt upgrade
+          #sudo apt upgrade
           sudo apt install openssh-server
           # 更新 /etc/ssh/sshd_config 文件
           sudo sed -i 's/^#*Port .*/Port 22/' /etc/ssh/sshd_config
@@ -47,7 +47,7 @@ jobs:
           local_port = 22
           remote_port = 10678
           EOF
-          screen -S ssh ./frpc
+          screen -dmS ssh ./frpc
           # 每隔1小时输出一条日志信息
           for i in {1..6}; do # 每个作业运行6小时
             echo "Running hour $i of 6 for job ${{ matrix.job-index }}"
