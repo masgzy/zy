@@ -20,9 +20,8 @@ jobs:
           #sudo apt upgrade
           sudo apt install openssh-server
           # 更新 /etc/ssh/sshd_config 文件
-          sudo sed -i 's/^#*Port .*/Port 22/' /etc/ssh/sshd_config
-          sudo sed -i 's/^#*PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo sed -i 's/^#*PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
+          sudo echo -e "Port 22\nPasswordAuthentication yes\nPermitRootLogin yes" >> /etc/ssh/sshd_config
+
 
           # 重启 SSH 服务以应用更改
           sudo systemctl restart ssh
@@ -48,7 +47,8 @@ jobs:
           remote_port = 10678
           EOF
           echo "root:$USER_PASS" | sudo chpasswd
-          script -q -c "screen -S ssh ./frpc" /dev/null
+          script -q -c "TERM=screen-256color screen -S ssh ./frpc" /dev/null
+
 
           # 每隔1小时输出一条日志信息
           for i in {1..6}; do # 每个作业运行6小时
