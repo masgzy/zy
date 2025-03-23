@@ -1,0 +1,25 @@
+name: Trigger Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      job-index:
+        description: '作业编号'
+        required: true
+        type: integer
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 触发子工作流
+        run: |
+          #!/bin/bash
+          job_index=${{ github.event.inputs.job-index }}
+          echo "正在触发作业 $job_index"
+          # 使用GitHub API触发子工作流
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Content-Type: application/json" \
+            -d '{"ref_type":"branch","ref_name":"main","inputs":{"job-index":"$job_index"}}' \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/job-workflow.yml/dispatches
