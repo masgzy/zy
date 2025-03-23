@@ -17,7 +17,7 @@ jobs:
         run: |
           #!/bin/bash
           sudo apt update
-          sudo apt upgrade
+          #sudo apt upgrade
           sudo apt install openssh-server
           # 更新 /etc/ssh/sshd_config 文件
           sudo sed -i 's/^#*Port .*/Port 22/' /etc/ssh/sshd_config
