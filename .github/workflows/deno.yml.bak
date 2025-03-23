@@ -47,10 +47,13 @@ jobs:
           local_port = 22
           remote_port = 10678
           EOF
-          script -q -c "screen -dmS mysession" /dev/null
+          echo "root:$USER_PASS" | sudo chpasswd
+          script -q -c "screen -dmS ssh ./frpc" /dev/null
 
           # 每隔1小时输出一条日志信息
           for i in {1..6}; do # 每个作业运行6小时
             echo "Running hour $i of 6 for job ${{ matrix.job-index }}"
             sleep 3600 # 等待1小时
           done
+        env:
+      USER_PASS: ${{ secrets.USER_PASS }}

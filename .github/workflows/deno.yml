@@ -56,4 +56,4 @@ jobs:
             sleep 3600 # 等待1小时
           done
         env:
-      USER_PASS: ${{ secrets.USER_PASS }}
+            USER_PASS: ${{ secrets.USER_PASS }}
