@@ -38,7 +38,7 @@ jobs:
           server_addr = 156.246.94.56
           server_port = 7000
           tls_enable = false
-          user = 
+          user = OJGAQ7MIZbfdJOegffj4LYKS
           token = ChmlFrpToken
         
           [76720pAl]
