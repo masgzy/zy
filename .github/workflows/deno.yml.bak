@@ -35,12 +35,12 @@ jobs:
           # 创建 frpc.ini 文件并写入配置内容
           cat <<EOF > frpc.ini
           [common]
-          server_addr = 103.36.220.182
-          server_port = 7002
+          server_addr = 156.246.94.56
+          server_port = 7000
           tls_enable = false
           user = OJGAQ7MIZbfdJOegffj4LYKS
           token = ChmlFrpToken
-
+        
           [76720pAl]
           type = tcp
           local_ip = 127.0.0.1
