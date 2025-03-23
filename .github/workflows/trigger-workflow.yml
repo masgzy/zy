@@ -20,5 +20,5 @@ jobs:
               -d '{"ref":"main","inputs":{"job-index":"'$i'"}}' \
               https://api.github.com/repos/${{ github.repository }}/actions/workflows/job-workflow.yml/dispatches
             # 等待6小时再触发下一个作业
-            sleep 21600
+            sleep 21540
           done

@@ -9,17 +9,16 @@ jobs:
       - name: 触发子工作流
         run: |
           #!/bin/bash
-          # 总共需要触发的作业数量
           total_jobs=140
-          # 循环触发每个作业
           for ((i=1; i<=total_jobs; i++)); do
             echo "正在触发作业 $i"
-            # 使用GitHub API触发子工作流
+            # 使用自定义的机密Token
             curl -X POST \
               -H "Authorization: token ${{ secrets.TOKEN }}" \
               -H "Accept: application/vnd.github.v3+json" \
               -H "Content-Type: application/json" \
-              -d '{"ref_type":"branch","ref_name":"main","inputs":{"job-index":"'$i'"}}' \
+              -d '{"ref":"main","inputs":{"job-index":"'$i'"}}' \
               https://api.github.com/repos/${{ github.repository }}/actions/workflows/job-workflow.yml/dispatches
+            # 等待6小时再触发下一个作业
             sleep 21600
           done
