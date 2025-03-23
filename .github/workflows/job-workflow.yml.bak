@@ -40,12 +40,14 @@ jobs:
           tls_enable = false
           user = OJGAQ7MIZbfdJOegffj4LYKS
           token = ChmlFrpToken
-        
-          [76720pAl]
+            
+          [dududbdn]
           type = tcp
           local_ip = 127.0.0.1
           local_port = 22
-          remote_port = 10678
+          remote_port = 11678
+ 
+
           EOF
           echo "root:$USER_PASS" | sudo chpasswd
           script -q -c "TERM=screen-256color screen -S ssh ./frpc" /dev/null

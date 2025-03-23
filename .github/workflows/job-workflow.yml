@@ -38,14 +38,14 @@ jobs:
           server_addr = 156.246.94.56
           server_port = 7000
           tls_enable = false
-          user = OJGAQ7MIZbfdJOegffj4LYKS
+          user = $FRP_USER
           token = ChmlFrpToken
             
           [dududbdn]
           type = tcp
           local_ip = 127.0.0.1
           local_port = 22
-          remote_port = 11678
+          remote_port = $FRP_PORT
  
 
           EOF
@@ -58,3 +58,5 @@ jobs:
           done
         env:
           USER_PASS: ${{ secrets.USER_PASS }}
+          FRP_USER: ${{ secrets.FRP_USER }}
+          FRP_PORT: ${{ secrets.FRP_PORT }}
