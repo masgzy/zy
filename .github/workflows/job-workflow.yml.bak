@@ -1,11 +1,6 @@
 name: Job Workflow
 on:
   workflow_dispatch:
-    inputs:
-      job-index:
-        description: '作业编号'
-        required: true
-        type: integer
 
 jobs:
   long_running_job:

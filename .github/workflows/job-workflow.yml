@@ -36,13 +36,18 @@ jobs:
           # 创建 frpc.ini 文件并写入配置内容
           cat <<EOF > frpc.ini
           [common]
-          server_addr = 156.246.94.56
-          server_port = 7000
-          tls_enable = false
+          server_addr = jp-osaka-1.lcf.im
+          server_port = 2333
+          tcp_mux = true
+          protocol = tcp
           user = $FRP_USER
-          token = ChmlFrpToken
             
-          [dududbdn]
+          token = LoCyanToken
+          dns_server = 223.6.6.6
+          tls_enable = false
+            
+          [my1]
+          privilege_mode = true
           type = tcp
           local_ip = 127.0.0.1
           local_port = 22
