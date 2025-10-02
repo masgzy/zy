@@ -1,0 +1,30 @@
+{
+  "desc": "0.2.0",
+  "plugins": [
+    {
+      "name": "网易云",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/xiaoyun.js",
+      "version": "0.0.2"
+    },
+    {
+      "name": "QQ",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/xiaoqiu.js",
+      "version": "0.0.2"
+    },
+    {
+      "name": "酷狗",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/kugou.js",
+      "version": "0.1.4"
+    },
+    {
+      "name": "酷我",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/xiaowo.js",
+      "version": "0.0.2"
+    },
+    {
+      "name": "bilibili",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/bilibili.js",
+      "version": "0.2.3"
+    }
+  ]
+}

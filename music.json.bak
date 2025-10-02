@@ -1,0 +1,30 @@
+{
+  "desc": "0.2.0",
+  "plugins": [
+    {
+      "name": "网易云",
+      "url": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaoyun.js",
+      "version": "0.0.2"
+    },
+    {
+      "name": "QQ",
+      "url": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaoqiu.js",
+      "version": "0.0.2"
+    },
+    {
+      "name": "酷狗",
+      "url": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/kugou.js",
+      "version": "0.1.4"
+    },
+    {
+      "name": "酷我",
+      "url": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaowo.js",
+      "version": "0.0.2"
+    },
+    {
+      "name": "bilibili",
+      "url": "https://gitee.com/maotoumao/MusicFreePlugins/raw/v0.1/dist/bilibili/index.js",
+      "version": "0.2.3"
+    }
+  ]
+}
