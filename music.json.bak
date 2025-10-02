@@ -3,27 +3,27 @@
   "plugins": [
     {
       "name": "网易云",
-      "url": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaoyun.js",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/xiaoyun.js",
       "version": "0.0.2"
     },
     {
       "name": "QQ",
-      "url": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaoqiu.js",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/xiaoqiu.js",
       "version": "0.0.2"
     },
     {
       "name": "酷狗",
-      "url": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/kugou.js",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/kugou.js",
       "version": "0.1.4"
     },
     {
       "name": "酷我",
-      "url": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaowo.js",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/xiaowo.js",
       "version": "0.0.2"
     },
     {
       "name": "bilibili",
-      "url": "https://gitee.com/maotoumao/MusicFreePlugins/raw/v0.1/dist/bilibili/index.js",
+      "url": "https://hk.gh-proxy.com/https://github.com/masgzy/zy/raw/main/music/bilibili.js",
       "version": "0.2.3"
     }
   ]
