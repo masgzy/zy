@@ -542,7 +542,7 @@ async function $69c13ef3ab1c1f3e$var$search(query, page, type) {
     if (type === "lyric") return await $69c13ef3ab1c1f3e$var$searchLyric(query, page);
 }
 const $69c13ef3ab1c1f3e$var$pluginInstance = {
-    platform: "小芸音乐",
+    platform: "网易云",
     author: "SoEasy同学",
     version: "0.0.3",
     srcUrl: "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaoyun.js",

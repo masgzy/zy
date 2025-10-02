@@ -501,7 +501,7 @@ async function $4e63e094b4590b2b$var$search(query, page, type) {
     if (type === "sheet") return await $4e63e094b4590b2b$var$searchMusicSheet(query, page);
 }
 const $4e63e094b4590b2b$var$pluginInstance = {
-    platform: "小蜗音乐",
+    platform: "酷我",
     author: "SoEasy同学",
     version: "0.0.3",
     srcUrl: "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaowo.js",

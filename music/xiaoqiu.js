@@ -460,7 +460,7 @@ async function $d25ff3d008f9e7e0$var$search(query, page, type) {
     if (type === "lyric") return await $d25ff3d008f9e7e0$var$searchLyric(query, page);
 }
 const $d25ff3d008f9e7e0$var$pluginInstance = {
-    platform: "小秋音乐",
+    platform: "QQ音乐",
     author: "SoEasy同学",
     version: "0.0.3",
     srcUrl: "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/xiaoqiu.js",
