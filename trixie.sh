@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "本脚本为升级debian trixie的懒人脚本"
-echo "作者:佚名"
 
 # 询问用户是否继续
 echo "是否继续执行操作？(y/n)"
